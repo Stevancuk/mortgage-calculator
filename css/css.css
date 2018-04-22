@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	font-family: 'Hind', sans-serif;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: content-box;
+}
+
+/* Basic tag styling */
+b {
+	font-weight: 800;
+}
+input {
+	height: 40px;
+	width: 260px;
+	display: inline-block;
+	border:1px solid #d5dee5;
+	border-radius: 3px;
+	font: 400 18px Arial;
+	text-align:left;
+	padding-left: 10px;
+}
+input:hover {
+	background-color: #efefef;
+	cursor: pointer;
+}
+select {
+	font-size: 14px;
+	height: 20px;
+}
+h1 {
+	font-size: 36px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	font-weight: 600;
+	text-align: center;
+	color: #61a4e8;
+	width: 250px;
+	letter-spacing: 2px;
+}
+h2 {
+	font-size: 20px;
+	margin: 18px 0px;
+	font-weight: 600;
+}
+h3 {
+	font-size: 24px;
+	margin: 16px 0px;
+	font-weight: 600;
+	text-align: center;
+	color: #c5161d;
+}
+p {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size:18px;
+	font: inherit;
+	color: #888b91;
+}
+#motrgage_wrapper_subb {
+	width: 1000px;
+	margin: 0 auto;
+}
+.allInputMortgage {
+	width: 800px;
+	margin: 0 auto;
+}
+.allHeadMain {
+	height: 40px;
+	background-color: #bce0ff;
+	border-radius: 4px;
+}
+.inlineBlock {
+	display: inline-block;
+}
+.headPClass {
+	font-size: 20px;
+	font-weight: 500;
+	color:#6b6c6d;
+}
+.labelClass {
+	font-size: 18px;
+	text-align: left;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+.mainInputsClass {
+	width: 350px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.allMortgageBlocks {
+	width: 390px;
+	margin-left: 5px;
+}
+.weekMonthClass {
+	width: 85px;
+	height: 40px;
+	border: 1px solid #d5dee5;
+	text-align: center;
+}
+.weekMonthClass:hover {
+	background-color: #3079c1;
+	color: #ffffff;
+	cursor: pointer; 
+}
+.weekMonthClass p:hover {
+	color: #ffffff;
+	cursor: pointer; 
+}
+.fothNigClass {
+	width: 110px;
+	height: 40px;
+	border: 1px solid #d5dee5;
+	text-align: center;
+}
+.fothNigClass p:hover {
+	color: #ffffff;
+	cursor: pointer;
+}
+.fothNigClass:hover {
+	background-color: #3079c1;
+	color: #ffffff;
+	cursor: pointer;
+}
+.fothNigClass p {
+	height: 40px;
+	line-height: 40px;
+}
+.weekMonthClass p {
+	height: 40px;
+	line-height: 40px;
+}
+.mortgageHeadMarg {
+	padding-top: 10px;
+}
+.arrowClass {
+	width: 12px;
+	height: 12px;
+	margin-left: 10px;
+}
+.arrowClass img {
+	width: 100%;
+}
+.arrowClass2 {
+	width: 12px;
+	height: 12px;
+	margin-left: 10px;
+	transform: rotate(180deg);
+	display: none;
+}
+.arrowClass2 img {
+	width: 100%;
+}
+.allInputsP {
+	font-size: 18px;
+}
+.mortgageInputsMain {
+	padding-bottom: 20px;
+	background-color: #f2f2f2;
+}
+.marginInputClass {
+	margin-left: 20px;
+}
