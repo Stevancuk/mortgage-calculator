@@ -150,6 +150,12 @@ p {
 	border: 1px solid #d5dee5;
 	text-align: center;
 }
+.active {
+	background-color: #3079c1;
+}
+.active p {
+	color: #ffffff;	
+}
 .weekMonthClass:hover {
 	background-color: #3079c1;
 	color: #ffffff;
@@ -212,4 +218,21 @@ p {
 }
 .marginInputClass {
 	margin-left: 20px;
+}
+
+
+
+
+
+/*During development*/
+#mortgage_inputs_main_2, #mortgage_inputs_main_3 {
+	display: none;
+}
+
+#arrow_up_2:hover {
+	cursor: pointer;
+}
+
+#arrow_up_3:hover {
+	cursor: pointer;
 }
