@@ -20,9 +20,10 @@ function getInputValues() {
 
 //writes all outputs
 function writeOutputs() {
-  $("#mortgage_total_span span").text(`${inputValues.mortg1.amount}`);
   $("#mortgage_w_r_1_span span").text(`${repayment.toFixed(2)}`);
   $("#mortgage_t_p_1_span").text(`${(repayment * numberOfPayments).toFixed(2)}`);
+  $("#mortgage_i_i_1_span").text(`${(repayment * numberOfPayments - inputValues.mortg1.amount).toFixed(2)}`);
+  $("#mortgage_for_1_span span").text(`${inputValues.mortg1.term.toFixed(0)}`);
 }
 
 var periodRate, numberOfPayments, repayment;
