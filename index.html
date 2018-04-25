@@ -33,7 +33,7 @@
 								<div id="mortgage_loan_amount_main_1" class="mainInputsClass">
 									<p class="labelClass">Loan amount</p>
 									<div id="loan_input_1" class="marginInputClass">
-									    <input class="inlineBlock" type="number" value="">
+									    <input class="inlineBlock" type="number" value="" max="1000000000">
 									    <p class="inlineBlock allInputsP">$</p>
 								    </div>
 								    <p class=""></p>
@@ -41,14 +41,14 @@
 								<div id="mortgage_interest_rate_main_1" class="mainInputsClass">
 									<p class="labelClass">Interest rate</p>
 									<div id="interest_rate_input_1" class="marginInputClass">
-									    <input class="inlineBlock" type="number" value="">
+									    <input class="inlineBlock" type="number" value="6" min="1" max="99">
 									    <p class="inlineBlock allInputsP">% p.a.</p>
 								    </div>
 								</div>
 								<div id="mortgage_term_main_1" class="mainInputsClass">
 									<p class="labelClass">Term</p>
 									<div id="term_input_1" class="marginInputClass">
-									    <input  class="inlineBlock" type="number" value="">
+									    <input  class="inlineBlock" type="number" value="" min="1" max="30">
 									    <p class="inlineBlock allInputsP">years</p>
 								    </div>
 								    <p class=""></p>
@@ -285,11 +285,11 @@
 					<div id="mortgage_results_for_1" class="allHeadMain3">
 						<p class="allPResults inlineBlock">For :</p>
 						<div id="mortgage_for_1_span" class="inlineBlock">
-							<p class="allPResults inlineBlock">years</p>
 							<span></span>
+							<p class="allPResults inlineBlock">years</p>
 						</div>	
 					</div>
-					<div id="mortgage_results_age_repaid_1" class="allHeadMain3">
+					<!-- <div id="mortgage_results_age_repaid_1" class="allHeadMain3">
 						<p class="allPResults inlineBlock">Age repaid by :</p>
 						<div id="mortgage_age_repaid_1_span" class="inlineBlock">
 							<span></span>
@@ -316,7 +316,7 @@
 						<div id="mortgage_select_year_1" class="inlineBlock">
 							<input class="yearInputClass" type="number" name="">
 						</div>	
-					</div>
+					</div> -->
 					<div id="mortgage_results_slider_1" class="mortgageSliderMain">
 						<p class="mortgageSliderText">Sorted tip</p>
 						<p class="mortgageSliderText">Increase repayments to save interest and be more mortgage free sooner</p>
@@ -324,7 +324,7 @@
 							<div id="mortgage_single_dolar_1" class="inlineBlock allDolarDivs marginDollarP">
 								<p>$</p>
 							</div>	
-							<input class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
+							<input id="mortgage_results_slider_input_1" class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
 							<div id="mortgage_multy_dolars_1" class="inlineBlock allDolarDivs marginDollarP2">
 								<p>$$$</p>
 							</div>
@@ -362,11 +362,11 @@
 					<div id="mortgage_results_for_2" class="allHeadMain3">
 						<p class="allPResults inlineBlock">For :</p>
 						<div id="mortgage_for_2_span" class="inlineBlock">
-							<p class="allPResults inlineBlock">years</p>
 							<span></span>
+							<p class="allPResults inlineBlock">years</p>
 						</div>	
 					</div>
-					<div id="mortgage_results_age_repaid_2" class="allHeadMain3">
+					<!-- <div id="mortgage_results_age_repaid_2" class="allHeadMain3">
 						<p class="allPResults inlineBlock">Age repaid by :</p>
 						<div id="mortgage_age_repaid_2_span" class="inlineBlock">
 							<span></span>
@@ -393,7 +393,7 @@
 						<div id="mortgage_select_year_2" class="inlineBlock">
 							<input class="yearInputClass" type="number" name="">
 						</div>	
-					</div>
+					</div> -->
 					<div id="mortgage_results_slider_2" class="mortgageSliderMain">
 						<p class="mortgageSliderText">Sorted tip</p>
 						<p class="mortgageSliderText">Increase repayments to save interest and be more mortgage free sooner</p>
@@ -401,7 +401,7 @@
 							<div id="mortgage_single_dolar_2" class="inlineBlock allDolarDivs marginDollarP">
 								<p>$</p>
 							</div>	
-							<input class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
+							<input id="mortgage_results_slider_input_2" class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
 							<div id="mortgage_multy_dolars_2" class="inlineBlock allDolarDivs marginDollarP2">
 								<p>$$$</p>
 							</div>
@@ -439,11 +439,11 @@
 					<div id="mortgage_results_for_3" class="allHeadMain3">
 						<p class="allPResults inlineBlock">For :</p>
 						<div id="mortgage_for_3_span" class="inlineBlock">
-							<p class="allPResults inlineBlock">years</p>
 							<span></span>
+							<p class="allPResults inlineBlock">years</p>
 						</div>	
 					</div>
-					<div id="mortgage_results_age_repaid_3" class="allHeadMain3">
+					<!-- <div id="mortgage_results_age_repaid_3" class="allHeadMain3">
 						<p class="allPResults inlineBlock">Age repaid by :</p>
 						<div id="mortgage_age_repaid_3_span" class="inlineBlock">
 							<span></span>
@@ -470,7 +470,7 @@
 						<div id="mortgage_select_year_3" class="inlineBlock">
 							<input class="yearInputClass" type="number" name="">
 						</div>	
-					</div>
+					</div> -->
 					<div id="mortgage_results_slider_3" class="mortgageSliderMain">
 						<p class="mortgageSliderText">Sorted tip</p>
 						<p class="mortgageSliderText">Increase repayments to save interest and be more mortgage free sooner</p>
@@ -478,7 +478,7 @@
 							<div id="mortgage_single_dolar_3" class="inlineBlock allDolarDivs marginDollarP">
 								<p>$</p>
 							</div>	
-							<input class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
+							<input id="mortgage_results_slider_input_3" class="inlineBlock sliderInput" type="range" min="1" max="100" value="50">
 							<div id="mortgage_multy_dolars_3" class="inlineBlock allDolarDivs marginDollarP2">
 								<p>$$$</p>
 							</div>
