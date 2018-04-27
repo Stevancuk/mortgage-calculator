@@ -217,7 +217,15 @@ p {
 	line-height: 40px;
 }
 .mortgageHeadMarg {
-	padding-top: 10px;
+	width: 600px;
+	height: 30px;
+}
+.mortgageHeadMarg2 {
+	width: 600px;
+	vertical-align: middle;
+}
+#mortgage_main_inputs_3 {
+	height: 41px;
 }
 .arrowClass {
 	width: 12px;
@@ -258,6 +266,13 @@ p {
 #mortgage_total_main p {
 	margin-left: 24px;
 	color: #ffffff;
+	width: 575px;
+}
+#mortgage_total_span {
+	width: 150px;
+	text-align: right;
+	color: #ffffff;
+	font-size: 20px;
 }
 #mortgage_all_results {
 	margin-top: 30px;
@@ -334,7 +349,38 @@ p {
 	line-height: 50px;
 	vertical-align: top;
 }
-
+.allSpanHead {
+	width: 150px;
+	height: 30px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-align:right;
+	line-height: 30px;
+	color: #828589;
+}
+.allPHeadAmount {
+	width: 20px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	font-size: 22px;
+	color: #828589;
+}
+.allPHeadAmount2 {
+	width: 20px;
+	text-align: center;
+	font-size: 20px;
+	color: #828589;
+}
+.allSpanHead  span {
+	width: 150px;
+	height: 30px;
+	display: inline-block;
+}
+.mainHeadPClass {
+	height: 40px;
+}
 /*During development*/
 
 #mortgage_inputs_main_2, #mortgage_inputs_main_3 {
