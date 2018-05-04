@@ -91,7 +91,7 @@ h1 {
 	margin-bottom: 60px;
 	font-weight: 600;
 	text-align: center;
-	color: #61a4e8;
+	color: #fc6621;
 	width: 250px;
 	letter-spacing: 2px;
 }
@@ -125,21 +125,23 @@ p {
 }
 .allHeadMain {
 	height: 40px;
-	background-color: #bce0ff;
+	background-color: #ededed;
 	border-radius: 4px;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 2px solid #fc6621;
 }
 .allHeadMain2 {
 	height: 40px;
-	background-color: #1f53a5;
+	background-color: #ededed;
 	border-radius: 4px;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 2px solid #fc6621;
+	color: #828589;
 }
 .allHeadMain3 {
 	height: 40px;
-	background-color: #1f7cf4;
+	background-color: #ededed;
 	border-radius: 4px;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 2px solid #fc6621;
+	color: #828589;
 }
 .inlineBlock {
 	display: inline-block;
@@ -148,12 +150,12 @@ p {
 	font-size: 20px;
 	font-weight: 500;
 	color:#828589;
-	margin-left: 24px;
+	margin-left:44px;
 }
 .headPClass2 {
 	font-size: 20px;
 	font-weight: 500;
-	color:#ffffff;
+	color:#828589;;
 	line-height: 40px;
 	margin-left: 24px;
 }
@@ -179,13 +181,13 @@ p {
 	text-align: center;
 }
 .active {
-	background-color: #3079c1;
+	background-color:#fc6621;
 }
 .active p {
 	color: #ffffff;	
 }
 .weekMonthClass:hover {
-	background-color: #3079c1;
+	background-color: #fc6621;
 	color: #ffffff;
 	cursor: pointer; 
 }
@@ -204,7 +206,7 @@ p {
 	cursor: pointer;
 }
 .fothNigClass:hover {
-	background-color: #3079c1;
+	background-color: #fc6621;
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -280,9 +282,12 @@ p {
 .allPResults {
     font-size: 20px;
     font-weight: 500;
-    color: #ffffff;
+    color: #828589;
     line-height: 40px;
     margin-left: 24px;
+}
+.allResultsPWidth {
+	width: 600px;
 }
 #mortgage_results_forth_1,#mortgage_results_month_1,#mortgage_results_forth_2,#mortgage_results_month_2,#mortgage_results_forth_3,#mortgage_results_month_3 {
 	display: none;
@@ -303,16 +308,16 @@ p {
 	margin-left: 20px;
 }
 .mortgageSliderMain {
-	width: 800px;
+	width: 796px;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border:2px solid #4777c1;
+	border:2px solid #fc6621;;
 	border-radius: 4px;
 }
 .mortgageSliderMain p {
 	font-size: 18px;
-	color: #4777c1;
+	color: #828589;
 }
 .mortgageSliderText {
 	margin:10px 0px 0px 24px;
@@ -321,21 +326,21 @@ p {
 	width: 500px;
 	-webkit-appearance: none; 
     height: 8px;
-    background: #bce0ff;
+    background: #ff8d59;
     outline: none;
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     border:none;
     margin-top: 20px;
 }
 .sliderInput:hover {
-    background: #bce0ff;
+    background: #fc6621;
 }
 .sliderInput::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background:  #1f7cf4; /* Green background */
+    background:  #fc6621; /* Green background */
     cursor: pointer; /* Cursor on hover */
     border:1px solid #ffffff;
     border-radius: 50%;
@@ -377,6 +382,20 @@ p {
 	width: 150px;
 	height: 30px;
 	display: inline-block;
+}
+.allHeadMain3 span {
+	width: 150px;
+	height: 30px;
+	display: inline-block;
+}
+.allSpanResults {
+	width: 150px;
+	height: 30px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-align:right;
+	line-height: 30px;
+	color: #828589;
 }
 .mainHeadPClass {
 	height: 40px;
