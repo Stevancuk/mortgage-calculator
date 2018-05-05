@@ -18,7 +18,7 @@ function getInputValues() {
   inputValues.mortg1.rate = parseInt($('#interest_rate_input_1 input').val());
   inputValues.mortg1.term = parseInt($('#term_input_1 input').val());
   inputValues.mortg1.repayment = parseInt($('#repayment_input_1 input').val());
-  inputValues.mortg1.extra = parseInt($('#extrarepayment_input_1 input').val()) || 0;
+  inputValues.mortg1.deposit = parseInt($('#extrarepayment_input_1 input').val()) || 0;
   // case 1 monthly
   if ( inputValues.mortg1.frequency == "monthly" ) { periodRate1 = inputValues["mortg1"].rate / 12 / 100; }
   // case 2 weekly
@@ -31,22 +31,22 @@ function getInputValues() {
 
 //writes all outputs
 function writeOutputsRepayment1() {
-  $("#mortgage_w_r_1_span span").text(repayment1.toFixed(0));
+  $("#mortgage_t_p_2_span span").text(`$${inputValues.mortg1.amount - inputValues.mortg1.deposit}`);
+  $("#mortgage_w_r_1_span span").text(`$${repayment1.toFixed(0)}`);
   $("#mortgage_results_slider_input_1").val(repayment1);
-  $("#mortgage_t_p_1_span span").text(`${(repayment1 * numberOfPayments1 + inputValues.mortg1.extra).toFixed(0)}`);
-  $("#mortgage_i_i_1_span span").text(`${(repayment1 * numberOfPayments1 + inputValues.mortg1.extra - inputValues.mortg1.amount).toFixed(0)}`);
-  $("#mortgage_for_1_span span").text(`${inputValues.mortg1.term.toFixed(0)}`);
+  $("#mortgage_t_p_1_span span").text(`$${(repayment1 * numberOfPayments1 ).toFixed(0)}`);
+  $("#mortgage_i_i_1_span span").text(`$${(repayment1 * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toFixed(0)}`);
   $("#repayment_input_1 input").val( Math.round(repayment1) );
 }
 
 function writeOutputsTerm1() {
   if ( isNaN(numberOfYears1) ) {
-    $("#mortgage_w_r_1_span span, #mortgage_t_p_1_span span, #mortgage_i_i_1_span span, #mortgage_for_1_span span").text("N/A");
+    $("#mortgage_t_p_2_span span, #mortgage_w_r_1_span span, #mortgage_t_p_1_span span, #mortgage_i_i_1_span span, #mortgage_for_1_span span").text("N/A");
   }else{
-    $("#mortgage_w_r_1_span span").text(inputValues["mortg1"].repayment);
-    $("#mortgage_t_p_1_span span").text(`${(inputValues["mortg1"].repayment * numberOfPayments1 + inputValues.mortg1.extra).toFixed(0)}`);
-    $("#mortgage_i_i_1_span span").text(`${(inputValues["mortg1"].repayment * numberOfPayments1 + inputValues.mortg1.extra - inputValues.mortg1.amount).toFixed(0)}`);
-    $("#mortgage_for_1_span span").text(`${numberOfYears1}`);
+    $("#mortgage_t_p_2_span span").text(`$${inputValues.mortg1.amount - inputValues.mortg1.deposit}`);
+    $("#mortgage_w_r_1_span span").text(`$${inputValues["mortg1"].repayment}`);
+    $("#mortgage_t_p_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 ).toFixed(0)}`);
+    $("#mortgage_i_i_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toFixed(0)}`);
     $("#term_input_1 input").val( numberOfYears1 );
   }
 }
@@ -68,7 +68,7 @@ function calculate1() {
         if ( inputValues.mortg1.frequency == "weekly" ) { numberOfPayments1 = inputValues["mortg1"].term * 52; }
         // case 3 fortnightly
         if ( inputValues.mortg1.frequency == "fort" ) { numberOfPayments1 = inputValues["mortg1"].term * 26; }
-        repayment1 = periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.extra) / ( 1 - 1 / Math.pow( (1+periodRate1), numberOfPayments1) );
+        repayment1 = periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / ( 1 - 1 / Math.pow( (1+periodRate1), numberOfPayments1) );
 
         // set min and max for slider1 (min is for 30years and max is for 1year);
         let testMinNumberOfPayments1, testMaxNumberOfPayments1;
@@ -88,10 +88,10 @@ function calculate1() {
           testMaxNumberOfPayments1 = 26;
         }
 
-        let testMinRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.extra) / ( 1 - 1 / Math.pow( (1+periodRate1), testMinNumberOfPayments1) ) + 1);
+        let testMinRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / ( 1 - 1 / Math.pow( (1+periodRate1), testMinNumberOfPayments1) ) + 1);
         $('#mortgage_results_slider_input_1').attr('min', testMinRepayment);
         console.log(testMinRepayment);
-        let testMaxRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.extra) / ( 1 - 1 / Math.pow( (1+periodRate1), testMaxNumberOfPayments1) ) + 1);
+        let testMaxRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / ( 1 - 1 / Math.pow( (1+periodRate1), testMaxNumberOfPayments1) ) + 1);
         $('#mortgage_results_slider_input_1').attr('max', testMaxRepayment);
         console.log(testMaxRepayment);
 
@@ -101,7 +101,7 @@ function calculate1() {
       // Case 2 - Term is being calculated
       if (  !isNaN(inputValues["mortg1"].repayment) ) {
         console.log ("Term");
-        numberOfPayments1 = -1 * getBaseLog(10, ( 1 - periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.extra) / inputValues["mortg1"].repayment ) ) / getBaseLog(10, (1+periodRate1));
+        numberOfPayments1 = -1 * getBaseLog(10, ( 1 - periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / inputValues["mortg1"].repayment ) ) / getBaseLog(10, (1+periodRate1));
         // case 1 monthly
         if ( inputValues.mortg1.frequency == "monthly" ) { numberOfYears1 = Math.ceil(numberOfPayments1 / 12); }
         // case 2 weekly
