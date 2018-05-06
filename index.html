@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 	<title>Mortgage Calculator</title>
-	<link rel="stylesheet" href="css/cssVer2.css">
+	<link rel="stylesheet" href="css/cssVer3.css">
 </head>
 <body>
 	<div id="mortgage_main_wrapper">
@@ -27,7 +27,7 @@
 								<div id="mortgage_loan_amount_main_1" class="mainInputsClass">
 									<p class="labelClass">House Price</p>
 									<div id="loan_input_1" class="marginInputClass">
-									    <input class="inlineBlock" type="number" value="" max="1000000000">
+									    <input class="inlineBlock cleaveInput" type="text" value="" max="1000000000">
 									    <p class="inlineBlock allInputsP">$</p>
 								    </div>
 								    <p class=""></p>
@@ -35,7 +35,7 @@
 								<div id="mortgage_extrarepayment_main_1" class="mainInputsClass">
 									<p class="labelClass">My Deposit</p>
 									<div id="extrarepayment_input_1" class="marginInputClass">
-									    <input  class="inlineBlock" type="number" value="">
+									    <input  class="inlineBlock cleaveInput" type="text" value="">
 									    <p class="inlineBlock allInputsP">$</p>
 								    </div>
 								    <p class=""></p>
@@ -43,7 +43,7 @@
 								<div id="mortgage_interest_rate_main_1" class="mainInputsClass">
 									<p class="labelClass">Interest Rate</p>
 									<div id="interest_rate_input_1" class="marginInputClass">
-									    <input class="inlineBlock" type="number" value="6" min="1" max="99">
+									    <input class="inlineBlock" type="text" value="5.95" min="1" max="99">
 									    <p class="inlineBlock allInputsP">% p.a.</p>
 								    </div>
 								</div>
@@ -52,13 +52,13 @@
 								<div id="mortgage_term_main_1" class="mainInputsClass">
 									<p class="labelClass">Loan Term in Years</p>
 									<div id="term_input_1" class="marginInputClass">
-									    <input  class="inlineBlock" type="number" value="" min="1" max="30">
+									    <input  class="inlineBlock" type="text" value="" min="1" max="30">
 									    <p class="inlineBlock allInputsP">years</p>
 								    </div>
 								    <p class=""></p>
 								</div>
 								<div id="mortgage_frequency_main_1" class="mainInputsClass">
-									<p class="labelClass">Frequency</p>
+									<p class="labelClass">Payment Frequency</p>
 									<div id="frequency_subb_1" class="marginInputClass">
 										<div id="frequency_weekly_1" class="inlineBlock weekMonthClass">
 										    <p class="">WEEKLY</p>
@@ -75,7 +75,7 @@
 								<div id="mortgage_repayment_main_1" class="mainInputsClass">
 									<p class="labelClass">Repayment</p>
 									<div id="repayment_input_1" class="marginInputClass">
-									    <input  class="inlineBlock" type="number" value="">
+									    <input  class="inlineBlock cleaveInput" type="text" value="">
 									    <p class="inlineBlock allInputsP">$</p>
 								    </div>
 								    <p class=""></p>
@@ -117,7 +117,7 @@
 						</div>	
 					</div>
 					<div id="mortgage_results_slider_1" class="mortgageSliderMain">
-						<p class="mortgageSliderText">Sorted tip</p>
+						<p class="mortgageSliderText">Tip</p>
 						<p class="mortgageSliderText">Increase repayments to save interest and be more mortgage free sooner</p>
 						<div id="mortgage_slider_input_1" class="mortgageSliderSubb">
 							<div id="mortgage_single_dolar_1" class="inlineBlock allDolarDivs marginDollarP">
@@ -140,6 +140,7 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script src="js/jsVer2.js"></script>
+<script src="js/cleave.js"></script>
+<script src="js/jsVer3.js"></script>
 </body>
 </html>

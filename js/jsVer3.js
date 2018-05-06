@@ -14,11 +14,11 @@ function getBaseLog(x, y) {
 
 function getInputValues() {
   // Calculator 1
-  inputValues.mortg1.amount = parseInt($('#loan_input_1 input').val());
-  inputValues.mortg1.rate = parseInt($('#interest_rate_input_1 input').val());
+  inputValues.mortg1.amount = parseInt( ($('#loan_input_1 input').val()).replace(/,/g,"") );
+  inputValues.mortg1.rate = parseFloat($('#interest_rate_input_1 input').val());
   inputValues.mortg1.term = parseInt($('#term_input_1 input').val());
-  inputValues.mortg1.repayment = parseInt($('#repayment_input_1 input').val());
-  inputValues.mortg1.deposit = parseInt($('#extrarepayment_input_1 input').val()) || 0;
+  inputValues.mortg1.repayment = parseInt( ($('#repayment_input_1 input').val()).replace(/,/g, "") );
+  inputValues.mortg1.deposit = parseInt( ($('#extrarepayment_input_1 input').val()).replace(/,/g, "") ) || 0;
   // case 1 monthly
   if ( inputValues.mortg1.frequency == "monthly" ) { periodRate1 = inputValues["mortg1"].rate / 12 / 100; }
   // case 2 weekly
@@ -31,22 +31,22 @@ function getInputValues() {
 
 //writes all outputs
 function writeOutputsRepayment1() {
-  $("#mortgage_t_p_2_span span").text(`$${inputValues.mortg1.amount - inputValues.mortg1.deposit}`);
-  $("#mortgage_w_r_1_span span").text(`$${repayment1.toFixed(0)}`);
+  $("#mortgage_t_p_2_span span").text(`$${(inputValues.mortg1.amount - inputValues.mortg1.deposit).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+  $("#mortgage_w_r_1_span span").text(`$${repayment1.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
   $("#mortgage_results_slider_input_1").val(repayment1);
-  $("#mortgage_t_p_1_span span").text(`$${(repayment1 * numberOfPayments1 ).toFixed(0)}`);
-  $("#mortgage_i_i_1_span span").text(`$${(repayment1 * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toFixed(0)}`);
-  $("#repayment_input_1 input").val( Math.round(repayment1) );
+  $("#mortgage_t_p_1_span span").text(`$${(repayment1 * numberOfPayments1 ).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+  $("#mortgage_i_i_1_span span").text(`$${(repayment1 * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+  $("#repayment_input_1 input").val( Math.round(repayment1).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0}) );
 }
 
 function writeOutputsTerm1() {
   if ( isNaN(numberOfYears1) ) {
     $("#mortgage_t_p_2_span span, #mortgage_w_r_1_span span, #mortgage_t_p_1_span span, #mortgage_i_i_1_span span, #mortgage_for_1_span span").text("N/A");
   }else{
-    $("#mortgage_t_p_2_span span").text(`$${inputValues.mortg1.amount - inputValues.mortg1.deposit}`);
-    $("#mortgage_w_r_1_span span").text(`$${inputValues["mortg1"].repayment}`);
-    $("#mortgage_t_p_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 ).toFixed(0)}`);
-    $("#mortgage_i_i_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toFixed(0)}`);
+    $("#mortgage_t_p_2_span span").text(`$${(inputValues.mortg1.amount - inputValues.mortg1.deposit).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+    $("#mortgage_w_r_1_span span").text(`$${inputValues["mortg1"].repayment.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+    $("#mortgage_t_p_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 ).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
+    $("#mortgage_i_i_1_span span").text(`$${(inputValues["mortg1"].repayment * numberOfPayments1 - inputValues.mortg1.amount + inputValues.mortg1.deposit).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}`);
     $("#term_input_1 input").val( numberOfYears1 );
   }
 }
@@ -123,9 +123,26 @@ function calculate1() {
 
 // ***** key input limitations *****
 
-$("#loan_input_1 input, #interest_rate_input_1 input, #term_input_1 input, #repayment_input_1 input, #extrarepayment_input_1 input, #loan_input_2 input, #interest_rate_input_2 input, #term_input_2 input, #repayment_input_2 input, #extrarepayment_input_2 input, #loan_input_3 input, #interest_rate_input_3 input, #term_input_3 input, #repayment_input_3 input, #extrarepayment_input_3 input").keydown(function (e) {
+$("#loan_input_1 input, #term_input_1 input, #repayment_input_1 input, #extrarepayment_input_1 input, #loan_input_2 input, #interest_rate_input_2 input, #term_input_2 input, #repayment_input_2 input, #extrarepayment_input_2 input, #loan_input_3 input, #interest_rate_input_3 input, #term_input_3 input, #repayment_input_3 input, #extrarepayment_input_3 input").keydown(function (e) {
     //Allow: backspace, delete, tab, escape, enter
     if ($.inArray(e.keyCode, [8, 46, 9, 27, 13 ]) !== -1 ||
+        // Allow: Ctrl+A
+        (e.keyCode == 65 && e.ctrlKey === true) || 
+        // Allow: Ctrl+V
+        (e.keyCode == 86 && e.ctrlKey === true) ||
+         // Allow: home, end, left, right
+        (e.keyCode >= 35 && e.keyCode <= 39)) {
+             // let it happen, don't do anything
+             return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if ( (e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)  ) {
+        e.preventDefault();
+    }
+});
+$("#interest_rate_input_1 input").keydown(function (e) {
+    //Allow: backspace, delete, tab, escape, enter, period, decimal point
+    if ($.inArray(e.keyCode, [8, 46, 9, 27, 13, 190, 110 ]) !== -1 ||
         // Allow: Ctrl+A
         (e.keyCode == 65 && e.ctrlKey === true) || 
         // Allow: Ctrl+V
@@ -175,6 +192,7 @@ $("#term_input_1 input, #term_input_2 input, #term_input_3 input").on("change", 
 
 // chooses payment frequency and removes/adds active class
 $('#frequency_weekly_1').on("click", function(){
+  $('#mortgage_results_week_1').text('Weekly repayments :');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "weekly";
@@ -182,6 +200,7 @@ $('#frequency_weekly_1').on("click", function(){
   calculate1();
 });
 $('#frequency_fortnightly_1').on("click", function(){
+  $('#mortgage_results_week_1').text('Fortnightly repayments :');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "fort";
@@ -189,6 +208,7 @@ $('#frequency_fortnightly_1').on("click", function(){
   calculate1();
 });
 $('#frequency_monthly_1').on("click", function(){
+  $('#mortgage_results_week_1').text('Monthly repayments :');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "monthly";
@@ -204,7 +224,7 @@ $('#frequency_monthly_1').on("click", function(){
 $('#mortgage_results_slider_input_1').on("input", function(){
   console.log ( $('#mortgage_results_slider_input_1').val() );
   calcRepayment1 = false;
-  $('#repayment_input_1 input').val( parseInt( $('#mortgage_results_slider_input_1').val() ) );
+  $('#repayment_input_1 input').val( parseInt( $('#mortgage_results_slider_input_1').val() ).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0}) ) ;
 })
 
 $('#repayment_input_1 input').on("change", function(){
@@ -215,33 +235,30 @@ $('#repayment_input_1 input').on("change", function(){
 
 
 
-
-
-
 // if Term input is last one changed then Repayment is being calculates
 $("#term_input_1 input").on("change", function(){
   calcRepayment1 = true;
 })
 
 
-
-
-//shrinks height of mort1/2/3   NEEDS WORK
-$("#arrow_up_2").on("click", function(){
-  $("#mortgage_inputs_main_2").css("display","block");
-})
-$("#arrow_up_3").on("click", function(){
-  $("#mortgage_inputs_main_3").css("display","block");
-})
-
-
-
-
-
-
 // *****   Click handlers ENDS ******
 
  $(function(){
+
+  var cleave = new Cleave('#loan_input_1 input', {
+    numeral: true,
+    numeralThousandsGroupStyle: 'thousand'
+  });
+  var cleave2 = new Cleave('#extrarepayment_input_1 input', {
+    numeral: true,
+    numeralThousandsGroupStyle: 'thousand'
+  });
+  var cleave3 = new Cleave('#repayment_input_1 input', {
+    numeral: true,
+    numeralThousandsGroupStyle: 'thousand'
+  });
+
+
  	getInputValues();
  	calculate1();
  })
