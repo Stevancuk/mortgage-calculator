@@ -143,6 +143,19 @@ p {
 	border-bottom: 1px solid #b2b2b2;
 	color: #828589;
 }
+#mortgage_results_weekly_repayments_1 {
+	height: 40px;
+	background-color: #fc6621;
+	border-radius: 4px;
+	border-bottom: 1px solid #b2b2b2;
+	color: #ffffff;
+}
+#mortgage_results_weekly_repayments_1 span {
+	color: #ffffff;
+}
+#mortgage_results_weekly_repayments_1 p {
+	color: #ffffff;
+}
 .inlineBlock {
 	display: inline-block;
 }
@@ -278,6 +291,7 @@ p {
 }
 #mortgage_all_results {
 	margin-top: 30px;
+	margin-bottom: 	30px;
 }
 .allPResults {
     font-size: 20px;
@@ -326,14 +340,28 @@ p {
 	width: 500px;
 	-webkit-appearance: none; 
     height: 8px;
-    background: #ff8d59;
+    background: rgba(240,47,23,1);
+	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(252,102,33,1)), color-stop(53%, rgba(241,111,92,1)), color-stop(64%, rgba(248,80,50,1)), color-stop(96%, rgba(246,44,15,1)), color-stop(99%, rgba(246,41,12,1)));
+	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#f6290c', GradientType=1 );
     outline: none;
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
     border:none;
     margin-top: 20px;
 }
 .sliderInput:hover {
-    background: #fc6621;
+    background: rgba(240,47,23,1);
+	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(252,102,33,1)), color-stop(53%, rgba(241,111,92,1)), color-stop(64%, rgba(248,80,50,1)), color-stop(96%, rgba(246,44,15,1)), color-stop(99%, rgba(246,41,12,1)));
+	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#f6290c', GradientType=1 );
 }
 .sliderInput::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
