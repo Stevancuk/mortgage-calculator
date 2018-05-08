@@ -192,7 +192,7 @@ $("#term_input_1 input, #term_input_2 input, #term_input_3 input").on("change", 
 
 // chooses payment frequency and removes/adds active class
 $('#frequency_weekly_1').on("click", function(){
-  $('#mortgage_results_week_1').text('Weekly repayments :');
+  $('#mortgage_results_week_1').text('Weekly repayments ');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "weekly";
@@ -200,7 +200,7 @@ $('#frequency_weekly_1').on("click", function(){
   calculate1();
 });
 $('#frequency_fortnightly_1').on("click", function(){
-  $('#mortgage_results_week_1').text('Fortnightly repayments :');
+  $('#mortgage_results_week_1').text('Fortnightly repayments ');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "fort";
@@ -208,7 +208,7 @@ $('#frequency_fortnightly_1').on("click", function(){
   calculate1();
 });
 $('#frequency_monthly_1').on("click", function(){
-  $('#mortgage_results_week_1').text('Monthly repayments :');
+  $('#mortgage_results_week_1').text('Monthly repayments ');
   $('#frequency_subb_1 > div').removeClass('active');
   $(this).addClass('active');
   inputValues.mortg1.frequency = "monthly";

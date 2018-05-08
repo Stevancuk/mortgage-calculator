@@ -144,8 +144,8 @@ p {
 	color: #828589;
 }
 #mortgage_results_weekly_repayments_1 {
-	height: 40px;
-	background-color: #fc6621;
+	height: 100px;
+	background-color: #ff6600;
 	border-radius: 4px;
 	border-bottom: 1px solid #b2b2b2;
 	color: #ffffff;
@@ -155,6 +155,35 @@ p {
 }
 #mortgage_results_weekly_repayments_1 p {
 	color: #ffffff;
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+#mortgage_w_r_1_span {
+	font-size: 34px;
+	padding-top: 20px;
+	width: 300px;
+}
+#mortgage_results_total_pay_2 {
+	background-color: #ff6600;
+	color: #ffffff;
+}
+#mortgage_results_total_pay_2 p {
+	width: auto;
+	color: #ffffff;
+	font-size: 18px;
+}
+#mortgage_results_total_pay_2_subb {
+	width: 300px;
+	margin-left: 290px;
+}
+#mortgage_t_p_2_span {
+	color: #ffffff;
+	height: 30px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-align:center;
+	line-height: 30px;
 }
 .inlineBlock {
 	display: inline-block;
@@ -333,6 +362,11 @@ p {
 	font-size: 18px;
 	color: #828589;
 }
+#mortgage_results_slider_1_p {
+	width: 580px;
+	margin: 0 auto;
+	padding:15px 0px 10px 0px;
+}
 .mortgageSliderText {
 	margin:10px 0px 0px 24px;
 }
@@ -412,16 +446,17 @@ p {
 	display: inline-block;
 }
 .allHeadMain3 span {
-	width: 150px;
 	height: 30px;
 	display: inline-block;
+	font-size: 18px;
 }
 .allSpanResults {
+	margin: 0 auto;
 	width: 150px;
 	height: 30px;
 	margin-top: 5px;
 	font-size: 20px;
-	text-align:right;
+	text-align:center;
 	line-height: 30px;
 	color: #828589;
 }
