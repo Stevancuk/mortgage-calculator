@@ -4,19 +4,19 @@
 */
 @import url('https://fonts.googleapis.com/css?family=Hind');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,body,#mortgage_main_wrapper div,#mortgage_main_wrapper span,#mortgage_main_wrapper applet,#mortgage_main_wrapper object,#mortgage_main_wrapper iframe,#mortgage_main_wrapper
+h1,#mortgage_main_wrapper h2,#mortgage_main_wrapper h3,#mortgage_main_wrapper h4,#mortgage_main_wrapper h5,#mortgage_main_wrapper h6,#mortgage_main_wrapper p,#mortgage_main_wrapper blockquote,#mortgage_main_wrapper pre,#mortgage_main_wrapper
+a,#mortgage_main_wrapper abbr,#mortgage_main_wrapper acronym,#mortgage_main_wrapper address,#mortgage_main_wrapper big,#mortgage_main_wrapper cite,#mortgage_main_wrapper code,#mortgage_main_wrapper
+del,#mortgage_main_wrapper dfn,#mortgage_main_wrapper em,#mortgage_main_wrapper img,#mortgage_main_wrapper ins,#mortgage_main_wrapper kbd,#mortgage_main_wrapper q,#mortgage_main_wrapper s,#mortgage_main_wrapper samp,#mortgage_main_wrapper
+small,#mortgage_main_wrapper strike,#mortgage_main_wrapper strong,#mortgage_main_wrapper sub,#mortgage_main_wrapper sup,#mortgage_main_wrapper tt,#mortgage_main_wrapper var,#mortgage_main_wrapper
+b,#mortgage_main_wrapper u,#mortgage_main_wrapper i,#mortgage_main_wrapper center,#mortgage_main_wrapper
+dl,#mortgage_main_wrapper dt,#mortgage_main_wrapper dd,#mortgage_main_wrapper ol,#mortgage_main_wrapper ul,#mortgage_main_wrapper li,#mortgage_main_wrapper
+fieldset,#mortgage_main_wrapper form,#mortgage_main_wrapper label,#mortgage_main_wrapper legend,#mortgage_main_wrapper
+table,#mortgage_main_wrapper caption,#mortgage_main_wrapper tbody,#mortgage_main_wrapper tfoot,#mortgage_main_wrapper thead,#mortgage_main_wrapper tr,#mortgage_main_wrapper th,#mortgage_main_wrapper td,#mortgage_main_wrapper
+article,#mortgage_main_wrapper aside,#mortgage_main_wrapper canvas,#mortgage_main_wrapper details,#mortgage_main_wrapper embed,#mortgage_main_wrapper 
+figure,#mortgage_main_wrapper figcaption,#mortgage_main_wrapper footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_main_wrapper 
+menu,#mortgage_main_wrapper nav,#mortgage_main_wrapper output,#mortgage_main_wrapper ruby,#mortgage_main_wrapper section,#mortgage_main_wrapper summary,#mortgage_main_wrapper
+time,#mortgage_main_wrapper mark,#mortgage_main_wrapper audio,#mortgage_main_wrapper video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,8 +25,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+#mortgage_main_wrapper article,#mortgage_main_wrapper aside,#mortgage_main_wrapper details,#mortgage_main_wrapper figcaption,#mortgage_main_wrapper figure,#mortgage_main_wrapper 
+footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_main_wrapper menu,#mortgage_main_wrapper nav,#mortgage_main_wrapper section {
 	display: block;
 }
 html {
@@ -35,31 +35,31 @@ html {
 body {
 	line-height: 1;
 }
-ol, ul {
+#mortgage_main_wrapperol,#mortgage_main_wrapper ul {
 	list-style: none;
 }
-blockquote, q {
+#mortgage_main_wrapper blockquote,#mortgage_main_wrapper q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+#mortgage_main_wrapper blockquote:before,#mortgage_main_wrapper blockquote:after,
+#mortgage_main_wrapper q:before,#mortgage_main_wrapper q:after {
 	content: '';
 	content: none;
 }
-table {
+#mortgage_main_wrapper table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-* {
+#mortgage_main_wrapper * {
 	box-sizing: content-box;
 }
 
 /* Basic tag styling */
-b {
+#mortgage_main_wrapper b {
 	font-weight: 800;
 }
-input {
+#mortgage_main_wrapper input {
 	height: 40px;
 	width: 260px;
 	display: inline-block;
@@ -69,11 +69,11 @@ input {
 	text-align:left;
 	padding-left: 10px;
 }
-input:hover {
+#mortgage_main_wrapper input:hover {
 	background-color: #efefef;
 	cursor: pointer;
 }
-select {
+#mortgage_main_wrapper select {
 	font-size: 16px;
 	height: 36px;
 	width: 150px;
@@ -84,7 +84,7 @@ select {
 	padding-left: 3px;
 	margin-left: 20px;
 }
-h1 {
+#mortgage_main_wrapper h1 {
 	font-size: 36px;
 	margin: 0 auto;
 	margin-top: 40px;
@@ -95,19 +95,19 @@ h1 {
 	width: 250px;
 	letter-spacing: 2px;
 }
-h2 {
+#mortgage_main_wrapper h2 {
 	font-size: 20px;
 	margin: 18px 0px;
 	font-weight: 600;
 }
-h3 {
+#mortgage_main_wrapper h3 {
 	font-size: 24px;
 	margin: 16px 0px;
 	font-weight: 600;
 	text-align: center;
 	color: #c5161d;
 }
-p {
+#mortgage_main_wrapper p {
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -115,191 +115,171 @@ p {
 	font: inherit;
 	color: #888b91;
 }
-#motrgage_wrapper_subb {
+#mortgage_main_wrapper #motrgage_wrapper_subb {
 	width: 1000px;
 	margin: 0 auto;
 }
-.allInputMortgage {
+#mortgage_main_wrapper .allInputMortgage {
 	width: 800px;
 	margin: 0 auto;
 }
-.allHeadMain {
+#mortgage_main_wrapper .allHeadMain {
 	height: 40px;
 	background-color: #ededed;
 	border-radius: 4px;
 	border-bottom: 2px solid #fc6621;
 }
-.allHeadMain2 {
+#mortgage_main_wrapper .allHeadMain2 {
 	height: 40px;
 	background-color: #ededed;
 	border-radius: 4px;
 	border-bottom: 2px solid #fc6621;
 	color: #828589;
 }
-.allHeadMain3 {
+#mortgage_main_wrapper .allHeadMain3 {
 	height: 40px;
 	background-color: #ededed;
 	border-radius: 4px;
 	border-bottom: 1px solid #b2b2b2;
 	color: #828589;
 }
-#mortgage_results_weekly_repayments_1 {
+#mortgage_main_wrapper #mortgage_results_weekly_repayments_1 {
 	height: 100px;
 	background-color: #ff6600;
 	border-radius: 4px;
 	border-bottom: 1px solid #b2b2b2;
 	color: #ffffff;
 }
-#mortgage_results_weekly_repayments_1 span {
+#mortgage_main_wrapper #mortgage_results_weekly_repayments_1 span {
 	color: #ffffff;
 }
-#mortgage_results_weekly_repayments_1 p {
+#mortgage_main_wrapper #mortgage_results_weekly_repayments_1 p {
 	color: #ffffff;
 	width: 300px;
 	margin: 0 auto;
 	text-align: center;
 }
-#mortgage_w_r_1_span {
+#mortgage_main_wrapper #mortgage_w_r_1_span {
 	font-size: 34px;
 	padding-top: 20px;
 	width: 300px;
+	text-align: center;
 }
-#mortgage_results_total_pay_2 {
-	background-color: #ff6600;
-	color: #ffffff;
-}
-#mortgage_results_total_pay_2 p {
-	width: auto;
-	color: #ffffff;
-	font-size: 18px;
-}
-#mortgage_results_total_pay_2_subb {
-	width: 300px;
-	margin-left: 290px;
-}
-#mortgage_t_p_2_span {
-	color: #ffffff;
-	height: 30px;
-	margin-top: 5px;
-	font-size: 20px;
-	text-align:center;
-	line-height: 30px;
-}
-.inlineBlock {
+#mortgage_main_wrapper .inlineBlock {
 	display: inline-block;
 }
-.headPClass {
+#mortgage_main_wrapper .headPClass {
 	font-size: 20px;
 	font-weight: 500;
 	color:#828589;
 	margin-left:44px;
 }
-.headPClass2 {
+#mortgage_main_wrapper .headPClass2 {
 	font-size: 20px;
 	font-weight: 500;
 	color:#828589;;
 	line-height: 40px;
 	margin-left: 24px;
 }
-.labelClass {
+#mortgage_main_wrapper .labelClass {
 	font-size: 18px;
 	text-align: left;
 	margin-bottom: 5px;
 	margin-left: 20px;
 }
-.mainInputsClass {
+#mortgage_main_wrapper .mainInputsClass {
 	width: 350px;
 	margin: 0 auto;
 	margin-top: 10px;
 }
-.allMortgageBlocks {
+#mortgage_main_wrapper .allMortgageBlocks {
 	width: 390px;
 	margin-left: 5px;
 }
-.weekMonthClass {
+#mortgage_main_wrapper .weekMonthClass {
 	width: 85px;
 	height: 40px;
 	border: 1px solid #d5dee5;
 	text-align: center;
 }
-.active {
+#mortgage_main_wrapper .active {
 	background-color:#fc6621;
 }
-.active p {
+#mortgage_main_wrapper .active p {
 	color: #ffffff;	
 }
-.weekMonthClass:hover {
+#mortgage_main_wrapper .weekMonthClass:hover {
 	background-color: #fc6621;
 	color: #ffffff;
 	cursor: pointer; 
 }
-.weekMonthClass p:hover {
+#mortgage_main_wrapper .weekMonthClass p:hover {
 	color: #ffffff;
 	cursor: pointer; 
 }
-.fothNigClass {
+#mortgage_main_wrapper .fothNigClass {
 	width: 110px;
 	height: 40px;
 	border: 1px solid #d5dee5;
 	text-align: center;
 }
-.fothNigClass p:hover {
+#mortgage_main_wrapper .fothNigClass p:hover {
 	color: #ffffff;
 	cursor: pointer;
 }
-.fothNigClass:hover {
+#mortgage_main_wrapper .fothNigClass:hover {
 	background-color: #fc6621;
 	color: #ffffff;
 	cursor: pointer;
 }
-.fothNigClass p {
+#mortgage_main_wrapper .fothNigClass p {
 	height: 40px;
 	line-height: 40px;
 }
-.weekMonthClass p {
+#mortgage_main_wrapper .weekMonthClass p {
 	height: 40px;
 	line-height: 40px;
 }
-.mortgageHeadMarg {
+#mortgage_main_wrapper .mortgageHeadMarg {
 	width: 600px;
 	height: 30px;
 }
-.mortgageHeadMarg2 {
+#mortgage_main_wrapper .mortgageHeadMarg2 {
 	width: 600px;
 	vertical-align: middle;
 }
-#mortgage_main_inputs_3 {
+#mortgage_main_wrapper #mortgage_main_inputs_3 {
 	height: 41px;
 }
-.arrowClass {
+#mortgage_main_wrapper .arrowClass {
 	width: 12px;
 	height: 12px;
 	margin-left: 10px;
 }
-.arrowClass img {
+#mortgage_main_wrapper .arrowClass img {
 	width: 100%;
 }
-.arrowClass2 {
+#mortgage_main_wrapper .arrowClass2 {
 	width: 12px;
 	height: 12px;
 	margin-left: 10px;
 	transform: rotate(180deg);
 	display: none;
 }
-.arrowClass2 img {
+#mortgage_main_wrapper .arrowClass2 img {
 	width: 100%;
 }
-.allInputsP {
+#mortgage_main_wrapper .allInputsP {
 	font-size: 18px;
 }
-.mortgageInputsMain {
+#mortgage_main_wrapper .mortgageInputsMain {
 	padding-bottom: 20px;
 	background-color: #f2f2f2;
 }
-.marginInputClass {
+#mortgage_main_wrapper .marginInputClass {
 	margin-left: 20px;
 }
-#mortgage_total_main {
+#mortgage_main_wrapper #mortgage_total_main {
 	width: 800px;
 	margin:0 auto;
 	font-size: 20px;
@@ -307,35 +287,35 @@ p {
 	line-height: 40px;
 	background-color: #4777c1;
 }
-#mortgage_total_main p {
+#mortgage_main_wrapper #mortgage_total_main p {
 	margin-left: 24px;
 	color: #ffffff;
 	width: 575px;
 }
-#mortgage_total_span {
+#mortgage_main_wrapper #mortgage_total_span {
 	width: 150px;
 	text-align: right;
 	color: #ffffff;
 	font-size: 20px;
 }
-#mortgage_all_results {
+#mortgage_main_wrapper #mortgage_all_results {
 	margin-top: 30px;
 	margin-bottom: 	30px;
 }
-.allPResults {
+#mortgage_main_wrapper .allPResults {
     font-size: 20px;
     font-weight: 500;
     color: #828589;
     line-height: 40px;
     margin-left: 24px;
 }
-.allResultsPWidth {
+#mortgage_main_wrapper .allResultsPWidth {
 	width: 600px;
 }
-#mortgage_results_forth_1,#mortgage_results_month_1,#mortgage_results_forth_2,#mortgage_results_month_2,#mortgage_results_forth_3,#mortgage_results_month_3 {
+#mortgage_main_wrapper #mortgage_results_forth_1,#mortgage_main_wrapper #mortgage_results_month_1,#mortgage_main_wrapper #mortgage_results_forth_2,#mortgage_main_wrapper #mortgage_results_month_2,#mortgage_main_wrapper #mortgage_results_forth_3,#mortgage_main_wrapper #mortgage_results_month_3 {
 	display: none;
 }
-.yearInputClass {
+#mortgage_main_wrapper .yearInputClass {
 	height: 34px;
 	font-size: 16px;
 	background-color:#bce0ff;
@@ -344,13 +324,13 @@ p {
 	width: 150px;
 	margin-left: 20px;
 }
-.marginDollarP {
+#mortgage_main_wrapper .marginDollarP {
 	margin-right: 20px;
 }
-.marginDollarP2 {
+#mortgage_main_wrapper .marginDollarP2 {
 	margin-left: 20px;
 }
-.mortgageSliderMain {
+#mortgage_main_wrapper .mortgageSliderMain {
 	width: 796px;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -358,19 +338,19 @@ p {
 	border:2px solid #fc6621;;
 	border-radius: 4px;
 }
-.mortgageSliderMain p {
+#mortgage_main_wrapper .mortgageSliderMain p {
 	font-size: 18px;
 	color: #828589;
 }
-#mortgage_results_slider_1_p {
+#mortgage_main_wrapper #mortgage_results_slider_1_p {
 	width: 580px;
 	margin: 0 auto;
 	padding:15px 0px 10px 0px;
 }
-.mortgageSliderText {
+#mortgage_main_wrapper .mortgageSliderText {
 	margin:10px 0px 0px 24px;
 }
-.sliderInput {
+#mortgage_main_wrapper .sliderInput {
 	width: 500px;
 	-webkit-appearance: none; 
     height: 8px;
@@ -387,7 +367,7 @@ p {
     border:none;
     margin-top: 20px;
 }
-.sliderInput:hover {
+#mortgage_main_wrapper .sliderInput:hover {
     background: rgba(240,47,23,1);
 	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(252,102,33,1)), color-stop(53%, rgba(241,111,92,1)), color-stop(64%, rgba(248,80,50,1)), color-stop(96%, rgba(246,44,15,1)), color-stop(99%, rgba(246,41,12,1)));
@@ -397,7 +377,7 @@ p {
 	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(252,102,33,1) 0%, rgba(241,111,92,1) 53%, rgba(248,80,50,1) 64%, rgba(246,44,15,1) 96%, rgba(246,41,12,1) 99%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#f6290c', GradientType=1 );
 }
-.sliderInput::-webkit-slider-thumb {
+#mortgage_main_wrapper .sliderInput::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
@@ -407,16 +387,16 @@ p {
     border:1px solid #ffffff;
     border-radius: 50%;
 }
-.mortgageSliderSubb {
+#mortgage_main_wrapper .mortgageSliderSubb {
 	width: 600px;
 	height: 50px;
 	margin: 0 auto;
 }
-.allDolarDivs {
+#mortgage_main_wrapper .allDolarDivs {
 	line-height: 50px;
 	vertical-align: top;
 }
-.allSpanHead {
+#mortgage_main_wrapper .allSpanHead {
 	width: 150px;
 	height: 30px;
 	margin-top: 5px;
@@ -425,7 +405,7 @@ p {
 	line-height: 30px;
 	color: #828589;
 }
-.allPHeadAmount {
+#mortgage_main_wrapper .allPHeadAmount {
 	width: 20px;
 	height: 30px;
 	text-align: center;
@@ -434,45 +414,40 @@ p {
 	font-size: 22px;
 	color: #828589;
 }
-.allPHeadAmount2 {
+#mortgage_main_wrapper .allPHeadAmount2 {
 	width: 20px;
 	text-align: center;
 	font-size: 20px;
 	color: #828589;
 }
-.allSpanHead  span {
+#mortgage_main_wrapper .allSpanHead  span {
 	width: 150px;
 	height: 30px;
 	display: inline-block;
 }
-.allHeadMain3 span {
+#mortgage_main_wrapper .allHeadMain3 span {
+	width: 150px;
 	height: 30px;
 	display: inline-block;
 	font-size: 18px;
+	text-align:right;
 }
-.allSpanResults {
+#mortgage_main_wrapper .allSpanResults {
 	margin: 0 auto;
 	width: 150px;
 	height: 30px;
 	margin-top: 5px;
 	font-size: 20px;
-	text-align:center;
+	text-align:right;
 	line-height: 30px;
 	color: #828589;
 }
-.mainHeadPClass {
+#mortgage_main_wrapper .mainHeadPClass {
 	height: 40px;
 }
 /*During development*/
 
-#mortgage_inputs_main_2, #mortgage_inputs_main_3 {
+#mortgage_main_wrapper #mortgage_inputs_main_2,#mortgage_main_wrapper #mortgage_inputs_main_3 {
 	display: none;
 }
 
-#arrow_up_2:hover {
-	cursor: pointer;
-}
-
-#arrow_up_3:hover {
-	cursor: pointer;
-}
