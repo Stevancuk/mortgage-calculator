@@ -3,9 +3,7 @@
 var inputValues = {
   "mortg1" : {
     "frequency" : "monthly"
-  },
-  "mortg2" : {},
-  "mortg3" : {}
+  }
 };
 
 function getBaseLog(x, y) {
@@ -25,8 +23,6 @@ function getInputValues() {
   if ( inputValues.mortg1.frequency == "weekly" ) { periodRate1 = inputValues["mortg1"].rate / 52 / 100; }
   // case 3 fortnightly
   if ( inputValues.mortg1.frequency == "fort" ) { periodRate1 = inputValues["mortg1"].rate / 26 / 100; }
-	console.log(`input values:`);
-	console.log(inputValues["mortg1"]);
 }
 
 //writes all outputs
@@ -61,7 +57,6 @@ function calculate1() {
     // Case 1 - Repayment is being calculated
     if (calcRepayment1) {
       if (  !isNaN(inputValues["mortg1"].term) ) {
-        console.log ("Repayment");
         // case 1 monthly
         if ( inputValues.mortg1.frequency == "monthly" ) { numberOfPayments1 = inputValues["mortg1"].term * 12; }
         // case 2 weekly
@@ -90,17 +85,14 @@ function calculate1() {
 
         let testMinRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / ( 1 - 1 / Math.pow( (1+periodRate1), testMinNumberOfPayments1) ) + 1);
         $('#mortgage_results_slider_input_1').attr('min', testMinRepayment);
-        console.log(testMinRepayment);
         let testMaxRepayment = Math.round( periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / ( 1 - 1 / Math.pow( (1+periodRate1), testMaxNumberOfPayments1) ) + 1);
         $('#mortgage_results_slider_input_1').attr('max', testMaxRepayment);
-        console.log(testMaxRepayment);
 
         writeOutputsRepayment1();
       }
     }else{
       // Case 2 - Term is being calculated
       if (  !isNaN(inputValues["mortg1"].repayment) ) {
-        console.log ("Term");
         numberOfPayments1 = -1 * getBaseLog(10, ( 1 - periodRate1 * (inputValues["mortg1"].amount - inputValues.mortg1.deposit) / inputValues["mortg1"].repayment ) ) / getBaseLog(10, (1+periodRate1));
         // case 1 monthly
         if ( inputValues.mortg1.frequency == "monthly" ) { numberOfYears1 = Math.ceil(numberOfPayments1 / 12); }
@@ -108,17 +100,12 @@ function calculate1() {
         if ( inputValues.mortg1.frequency == "weekly" ) { numberOfYears1 = Math.ceil(numberOfPayments1 / 52); }
         // case 3 fortnightly
         if ( inputValues.mortg1.frequency == "fort" ) { numberOfYears1 = Math.ceil(numberOfPayments1 / 26); }
-        console.log(numberOfYears1);
         writeOutputsTerm1();
 
       }
     }  // Term is calculated
   }  //  amount and rate are must
 }
-
-
-
-
 
 
 // ***** key input limitations *****
@@ -185,7 +172,6 @@ $("#term_input_1 input, #term_input_2 input, #term_input_3 input").on("change", 
     }
 });
 
-
 // ***** key input limitations ENDS *****
 
 // *****   Click handlers   ******
@@ -216,30 +202,22 @@ $('#frequency_monthly_1').on("click", function(){
   calculate1();
 });
 
-
-
-
 // inputs and Sliders
 // if Repayment input is last one changed then Term is being calculates
 $('#mortgage_results_slider_input_1').on("input", function(){
-  console.log ( $('#mortgage_results_slider_input_1').val() );
   calcRepayment1 = false;
   $('#repayment_input_1 input').val( parseInt( $('#mortgage_results_slider_input_1').val() ).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0}) ) ;
 })
 
 $('#repayment_input_1 input').on("change", function(){
-  console.log ( $('#mortgage_results_slider_input_1').val() );
   calcRepayment1 = false;
   $('#mortgage_results_slider_input_1').val( parseInt( $('#repayment_input_1 input').val() ) );
 })
-
-
 
 // if Term input is last one changed then Repayment is being calculates
 $("#term_input_1 input").on("change", function(){
   calcRepayment1 = true;
 })
-
 
 // *****   Click handlers ENDS ******
 
@@ -258,7 +236,6 @@ $("#term_input_1 input").on("change", function(){
     numeralThousandsGroupStyle: 'thousand'
   });
 
-
  	getInputValues();
  	calculate1();
  })
@@ -266,5 +243,4 @@ $("#term_input_1 input").on("change", function(){
  $('input').on("change",function() {
  	getInputValues();
  	calculate1();
-
  });
