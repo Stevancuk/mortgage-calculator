@@ -170,7 +170,7 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
 	display: inline-block;
 }
 #mortgage_main_wrapper .headPClass {
-	font-size: 20px;
+	font-size: 20px !important;
 	font-weight: 500;
 	color:#828589;
 	margin-left:44px;
@@ -307,7 +307,7 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
 	margin-bottom: 	30px;
 }
 #mortgage_main_wrapper .allPResults {
-    font-size: 18px;
+    font-size: 18px !important;
     font-weight: 500;
     color: #ffffff;
     line-height: 40px;
@@ -465,7 +465,7 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
 	text-align: center;
 }
 #mortgage_main_wrapper #mortgage_results_total_pay_2_subb p {
-	font-size: 18px;
+	font-size: 18px !important;
 	color: #ffffff;
 }
 #mortgage_main_wrapper #mortgage_results_total_pay_1_subb {
@@ -475,7 +475,7 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
 	text-align: center;
 }
 #mortgage_main_wrapper #mortgage_results_total_pay_1_subb p {
-	font-size: 18px;
+	font-size: 18px !important;
 	color: #ffffff;
 }
 #mortgage_main_wrapper #mortgage_results_inclu_intrest_1_subb {
@@ -520,6 +520,14 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
     }
     #mortgage_main_wrapper .allMortgageBlocks {
     	width: 225px;
+    	height: 267px;
+    	vertical-align: top;
+    }
+    #mortgage_main_wrapper #mortgage_loan_amount_main_1 {
+        margin-bottom: 30px;
+    }
+     #mortgage_main_wrapper #mortgage_extrarepayment_main_1 {
+    	margin-bottom: 	32px;
     }
     #mortgage_main_wrapper .mainInputsClass {
     	width: 210px;
@@ -549,5 +557,102 @@ footer,#mortgage_main_wrapper header,#mortgage_main_wrapper hgroup,#mortgage_mai
     }
 }
 @media (max-width: 560px) {
-
+    #mortgage_main_wrapper #motrgage_wrapper_subb {
+        width: 320px;
+    }
+    #mortgage_main_wrapper .allInputMortgage {
+    	width: 320px;
+    }
+    #mortgage_main_wrapper #mortgage_results_weekly_repayments_1 p {
+	    width: 320px;
+    }
+    #mortgage_main_wrapper #mortgage_results_total_pay_2_subb {
+    	margin-left: 20px;
+    	width: 	300px;
+    	text-align: left;	
+    }
+    #mortgage_main_wrapper #mortgage_results_total_pay_1_subb {
+    	margin-left: 20px;
+    	width: 	300px;
+    	text-align: left;
+    }
+    #mortgage_main_wrapper #mortgage_results_inclu_intrest_1_subb {
+        margin-left: 20px;
+    	width: 	300px;
+    	text-align: left;
+    }
+    #mortgage_main_wrapper .mortgageSliderMain {
+    	width: 316px;
+    }
+    #mortgage_main_wrapper #mortgage_results_slider_1_p {
+    	width: 300px;
+    	text-align: center;
+    }
+    #mortgage_main_wrapper .sliderInput {
+    	width: 280px;
+    	margin-left: 18px;
+    }
+    #mortgage_main_wrapper #mortgage_single_dolar_1,#mortgage_main_wrapper #mortgage_multy_dolars_1 {
+    	display: none;	
+    }
+    #mortgage_main_wrapper .headPClass {
+    	width: 100px;
+    	margin: 0px;
+    	text-align:center;	
+    }
+    #mortgage_main_wrapper .mortgageHeadMarg {
+    width: 100px;
+    margin:0 auto;
+    padding-top: 10px;
+    display: block;
+    }
+    #mortgage_main_wrapper .labelClass {
+    display:block;	
+    }
+    #mortgage_main_wrapper input {
+    width: 230px;
+    padding-left: 10px;
+    }
+    #mortgage_main_wrapper .marginInputClass {
+    width: 300px;
+    margin-left: 15px;
+    }
+    #mortgage_main_wrapper #mortgage_loan_amount_main_1 {
+    margin: 10px 0px 0px 12px;
+    }
+    #mortgage_main_wrapper .allMortgageBlocks {
+    width: auto;
+    padding-top: 	10px;
+    height:auto;
+    margin: 0px;
+    display: block;	
+    }
+    #mortgage_main_wrapper .mainInputsClass {
+    width: 300px;
+    }
+    #mortgage_main_wrapper #mortgage_extrarepayment_main_1 {
+    margin: 10px 0px 0px 12px;
+    }
+    #mortgage_main_wrapper .weekMonthClass {
+    width: 250px;
+    height: 40px;
+    display: block;	
+    margin-bottom: 	10px;
+    }
+    #mortgage_main_wrapper .fothNigClass {
+    width: 250px;
+    height: 40px;
+    display: block;
+    margin-bottom: 	10px;
+    }
+    #mortgage_main_wrapper .fothNigClass p {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px !important;
+    }
+    #mortgage_main_wrapper .weekMonthClass p {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px !important;
+    }
 }
